@@ -21,9 +21,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="wrapper">
 
  {{-- 1 .Top Menu --}}
-@include('layouts.topMenu')
+@include('layo.topMenu')
  {{-- 2. left Menu --}}
-@include('layouts.leftMenu')
+@include('layo.leftMenu')
  {{-- 3. Main Content(body) --}}
 
    <!-- Content Wrapper. Contains page content -->
@@ -35,9 +35,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.content-wrapper -->
 
   {{-- 4. Right Menu --}}
-@include('layouts.rightMenu')
+@include('layo.rightMenu')
   {{-- 5. Footer --}}
-@include('layouts.footerMenu')
+@include('layo.footerMenu')
 
   <!-- Control Sidebar -->
   

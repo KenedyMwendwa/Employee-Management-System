@@ -2,7 +2,7 @@
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
-      {{-- <img src="{{ asset('vendor/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
+      <img src="{{ asset('vendor/dist/img/makueni.jpeg')}}" alt="Makueni Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Makueni County EMS</span>
     </a>
 
@@ -39,7 +39,7 @@
  <div>
   <li class="nav-item menu-open">
     <a href="#" class="nav-link active">
-      <i class="nav-icon fas fa-tachometer-alt"></i>
+      <i class="fa fa-university" aria-hidden="true"></i>
       <p>
         Departments
         <i class="right fas fa-angle-left"></i>
@@ -47,13 +47,13 @@
     </a>
  <ul class="nav nav-treeview">
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="departments/all" class="nav-link">
           <i class="far fa-box nav-icon"></i>
           <p>All Departments</p>
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="departments/create" class="nav-link">
           <i class="far fa-box nav-icon"></i>
           <p>Add department</p>
         </a>
@@ -65,7 +65,7 @@
 {{-- start of departments icon --}}
 <li class="nav-item menu-open">
   <a href="#" class="nav-link active">
-    <i class="nav-icon fas fa-tachometer-alt"></i>
+      <i class="fa fa-users" aria-hidden="true"></i>
     <p>
       Employees
       <i class="right fas fa-angle-left"></i>
@@ -91,8 +91,8 @@
 
 {{-- start of departments icon --}}
 <li class="nav-item menu-open">
-  <a href="#" class="nav-link">
-    <i class="nav-icon fas fa-tachometer-alt"></i>
+  <a href="#" class="nav-link active">
+    <i class="fa fa-folder" aria-hidden="true"></i>
     <p>
       Reports
       <i class="right fas fa-angle-left"></i>

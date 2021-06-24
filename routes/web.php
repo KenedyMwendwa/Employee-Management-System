@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DepartmentsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
+
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+Route::get('/Admin', [AdminController::class, 'index']);
+Route::get('/Admin/allDepartments', [AdminController::class, 'show']);
+Route::get('/departments/all', [DepartmentsController::class, 'index']);
+Route::get('/departments/create', [DepartmentsController::class, 'create']);
