@@ -31,7 +31,7 @@
                         </center>
                         <center>
                           <div class="control-group col-7 mt-2">
-                            <input type="text" id="Department_Code" class="form-control" name="Department_code"
+                            <input type="text" id="Department_Code" class="form-control" name="Department_Code"
                                    placeholder="Enter Department Code" required>
                         </div>
                         </center>

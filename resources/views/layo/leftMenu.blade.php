@@ -45,8 +45,8 @@
         <i class="right fas fa-angle-left"></i>
       </p>
     </a>
- <ul class="nav nav-treeview">
-      <li class="nav-item, button">
+ <ul class="nav ">
+      <li class="nav-item">
         <a href="departments/all" class="nav-link">
           <i class="far fa-box nav-icon"></i>
           <p>All Departments</p>
