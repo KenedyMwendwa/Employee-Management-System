@@ -47,13 +47,13 @@
     </a>
  <ul class="nav ">
       <li class="nav-item">
-        <a href="departments/all" class="nav-link">
+        <a href="{{ route('all-departments') }}" class="nav-link">
           <i class="far fa-box nav-icon"></i>
           <p>All Departments</p>
         </a>
       </li>
       <li class="nav-item">
-        <a href="departments/create" class="nav-link">
+        <a href="{{ route('create-department') }}" class="nav-link">
           <i class="far fa-box nav-icon"></i>
           <p>Add department</p>
         </a>

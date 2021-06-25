@@ -16,12 +16,17 @@ use App\Http\Controllers\DepartmentsController;
 
 
 
-// Route::get('/', function () {
-//     return view('index');
-// });
 
-Route::get('/Admin', [AdminController::class, 'index']);
-Route::get('/Admin/allDepartments', [AdminController::class, 'show']);
-Route::get('/departments/all', [DepartmentsController::class, 'index']);
-Route::get('/departments/create', [DepartmentsController::class, 'create']);
-Route::post('/departments/create', [DepartmentsController::class, 'store'] );
+Auth::routes();
+
+Route::get('/', function () {
+    return view('auth.login');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/Admin', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/departments/all', [DepartmentsController::class, 'index'])->name('all-departments');
+    Route::get('/departments/create', [DepartmentsController::class, 'create'])->name('create-department');
+    Route::post('/departments/create', [DepartmentsController::class, 'store']);
+});
