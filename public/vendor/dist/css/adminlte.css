@@ -10847,7 +10847,8 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
   .table .thead-dark th {
-    color: inherit;
+    /* color: inherit; */
+    background-color: #fff !important;
     border-color: #dee2e6;
   }
 }

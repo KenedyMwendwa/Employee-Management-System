@@ -15,7 +15,7 @@
   <!-- /.content-header -->
   <div class="table table-responsive">
     <table id="table_id" class="table table-striped table-bordered">
-        <thead>
+        <thead class="table .thead-dark th">
             <tr>
                 <th>id</th>
                 <th>Department Name</th>
@@ -30,7 +30,12 @@
                     <td>{{ ucfirst($department->id) }}</td>
                     <td>{{ ucfirst($department->Department_Name) }}</td>
                     <td>{{ ucfirst($department->Department_Code) }}</td>
-                    <td>Edit/Delete</td>      
+                    <td> <button class="btn-outline-success, btn-info">
+                       <a href="departments.edit">Edit</a>
+                        </button> 
+                        <button class="btn-danger, btn-danger">
+                            <a href="departments.delete">Delete</a> 
+                        </button></td>      
                 @empty
                     <p class="text-warning">No departments available</p>
                 @endforelse
