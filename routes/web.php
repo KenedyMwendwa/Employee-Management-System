@@ -24,3 +24,4 @@ Route::get('/Admin', [AdminController::class, 'index']);
 Route::get('/Admin/allDepartments', [AdminController::class, 'show']);
 Route::get('/departments/all', [DepartmentsController::class, 'index']);
 Route::get('/departments/create', [DepartmentsController::class, 'create']);
+Route::post('/departments/create', [DepartmentsController::class, 'store'] );

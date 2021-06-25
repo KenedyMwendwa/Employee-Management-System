@@ -46,7 +46,7 @@
       </p>
     </a>
  <ul class="nav nav-treeview">
-      <li class="nav-item">
+      <li class="nav-item, button">
         <a href="departments/all" class="nav-link">
           <i class="far fa-box nav-icon"></i>
           <p>All Departments</p>

@@ -39,7 +39,12 @@ class DepartmentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $newDepartment = Departments::create([
+            'Department Name' => $request->Department_Name,
+            'Department Code' => $request->Department_Code,
+        ]);
+
+        return redirect('/departments/all' . $newDepartment->id);
     }
 
     /**

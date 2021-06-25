@@ -9,4 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 class Departments extends Model
 {
     use HasFactory;
+    Protected $fillable =['Department_Name', 'Department_Code'];
 }
