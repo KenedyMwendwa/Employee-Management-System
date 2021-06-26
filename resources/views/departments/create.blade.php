@@ -24,13 +24,13 @@
                       @csrf
                       <div class="row">
                         <center>
-                          <div class="control-group col-7">
+                          <div class="control-group col-13">
                             <input type="text" id="Department_Name" class="form-control" name="Department_Name"
                                    placeholder="Enter Department Name" required>
                         </div>
                         </center>
                         <center>
-                          <div class="control-group col-7 mt-2">
+                          <div class="control-group col-13">
                             <input type="text" id="Department_Code" class="form-control" name="Department_Code"
                                    placeholder="Enter Department Code" required>
                         </div>
