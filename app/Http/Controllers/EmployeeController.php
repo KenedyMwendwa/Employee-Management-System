@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Departments;
+use App\Models\Employee;
 
-class DepartmentsController extends Controller
+class EmployeeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class DepartmentsController extends Controller
      */
     public function index()
     {
-        $departments = Departments::all(); //fetch all blog posts from DB
-	    return view('departments.all', [
-            'departments'=>$departments,
+        $employees = Employee::all();//all employees
+        return view('employees.all', [
+            'employees'=>$employees,
         ]);
     }
 
@@ -27,8 +27,7 @@ class DepartmentsController extends Controller
      */
     public function create()
     {
-        
-        return view('departments.create');
+    return view('employees.create');
     }
 
     /**
@@ -39,12 +38,19 @@ class DepartmentsController extends Controller
      */
     public function store(Request $request)
     {
-        $newDepartment = Departments::create([
-            'Department_Name' => $request->Department_Name,
-            'Department_Code' => $request->Department_Code,
-        ]);
+        {
+            $newEmployee = Employee::create([
+                'employee_name' => $request->employee_name,
+                'employee_age' => $request->employee_age,
+                'employee_department' => $request->employee_department,
+                'employee_salary' => $request->employee_salary,
+                'employee_attendance' => $request->employee_attendance,
+                'employee_performance' => $request->employee_performance,
+            ]);
+        }
 
-        return redirect('/departments/all');
+        // return redirect('/employees/create' . $newEmployee->id);
+        return redirect('/employees/all');
     }
 
     /**

@@ -23,18 +23,16 @@
                   <form action="" method="POST">
                       @csrf
                       <div class="row">
-                        <center>
                           <div class="control-group col-13">
+                            <label for="title">Department Name</label>
                             <input type="text" id="Department_Name" class="form-control" name="Department_Name"
                                    placeholder="Enter Department Name" required>
                         </div>
-                        </center>
-                        <center>
                           <div class="control-group col-13">
+                            <label for="title">Department Code</label>
                             <input type="text" id="Department_Code" class="form-control" name="Department_Code"
                                    placeholder="Enter Department Code" required>
                         </div>
-                        </center>
                       </div>
                       <div class="row mt-2">
                           <div class="control-group col-12 text-center">

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DepartmentsController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,4 +30,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/departments/all', [DepartmentsController::class, 'index'])->name('all-departments');
     Route::get('/departments/create', [DepartmentsController::class, 'create'])->name('create-department');
     Route::post('/departments/create', [DepartmentsController::class, 'store']);
+//employees
+Route::get('/employees/all', [EmployeeController::class, 'index'])->name('all-employees');
+Route::get('/employees/create', [EmployeeController::class, 'create'])->name('create-employee');
+Route::post('/employees/create', [EmployeeController::class, 'store']);
 });

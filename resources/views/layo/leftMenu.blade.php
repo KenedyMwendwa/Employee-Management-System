@@ -73,13 +73,13 @@
   </a>
   <ul class="nav nav-treeview">
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('all-employees') }}" class="nav-link">
         <i class="far fa-box nav-icon"></i>
         <p>All employees</p>
       </a>
     </li>
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a href="{{ route('create-employee') }}" class="nav-link">
         <i class="far fa-box nav-icon"></i>
         <p>Add Employee</p>
       </a>
