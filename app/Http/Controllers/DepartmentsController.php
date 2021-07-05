@@ -53,9 +53,11 @@ class DepartmentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Departments $department)
     {
-        //
+        return view('departments.single', [
+            'department' => $department,
+        ]); 
     }
 
     /**
@@ -64,21 +66,29 @@ class DepartmentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Departments $department)
     {
-        //
+        
+        return view('departments.edit', [
+            'department' => $department,
+            ]);
     }
 
-    /**
+   /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Departments $department)
     {
-        //
+        $department->update([
+            'Department_Name' => $request->Department_Name,
+            'Department_Code' => $request->Department_Code,
+        ]);
+
+        return redirect('/departments/all');
     }
 
     /**
@@ -87,8 +97,11 @@ class DepartmentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Departments $department)
     {
-        //
+    
+        $department->delete();
+
+        return redirect('/departments/all');
     }
 }

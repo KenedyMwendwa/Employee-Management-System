@@ -31,10 +31,10 @@
                     <td>{{ ucfirst($department->Department_Name) }}</td>
                     <td>{{ ucfirst($department->Department_Code) }}</td>
                     <td> <button class="btn-outline-success, btn-info">
-                       <a href="departments.edit">Edit</a>
+                       <a href="{{ route('edit-department') }}">Edit</a>
                         </button> 
                         <button class="btn-danger, btn-danger">
-                            <a href="departments.delete">Delete</a> 
+                            <a href="{{ route('delete-department') }}">Delete</a> 
                         </button></td>      
                 @empty
                     <p class="text-warning">No departments available</p>

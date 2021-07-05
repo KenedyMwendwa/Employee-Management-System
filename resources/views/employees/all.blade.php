@@ -28,7 +28,7 @@
             </tr>
         </thead>
         <tbody>
- 
+     
                 @forelse($employees as $employee)
                 <tr>
                     <td>{{ ucfirst($employee->id) }}</td>
